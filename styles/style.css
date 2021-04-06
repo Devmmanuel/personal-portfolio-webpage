@@ -8,24 +8,14 @@ html, body {
     font-family: "Montserrat";
 }
 
-header {
+#navbar {
     background-color: black;
     height: 20vh;
     width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    position: fixed;
-}
-
-#navbar {
-    width: 50%;
-    height: 4.5vw;
-    display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    margin-right: 3%;
+    position: fixed;
 }
 
 #navbar a {
@@ -34,6 +24,12 @@ header {
     font-size: 2vw;
     margin-right: 2%;
     margin-left: 2%;
+    font-weight: 400;
+}
+
+#navbar a:hover {
+    color: lawngreen;
+    text-decoration-line: underline;
 }
 
 #welcome-section {
@@ -47,13 +43,16 @@ header {
 
 #welcome-section h1 {
     font-size: 5vw;
+    font-weight: 900;
 }
 
 #welcome-section p {
     font-size: 3vw;
+    font-weight: 500;
 }
 
 #projects {
+    align-items: center;
     background-color: white;
     height: auto;
     text-align: center;
@@ -61,6 +60,7 @@ header {
 
 #projects h1 {
     font-size: 2.5vw;
+    font-weight: 900;
 }
 
 #projects hr {
@@ -75,24 +75,27 @@ header {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-#projects div figure {
+.project-tile {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#projects div figure img {
+.project-tile img {
     width: 100%;
     height: 80%;
     border-style: solid;
-    border-color: darkgray;
+    border-color: #1b1717;
+    border-width: thin;
+    margin-bottom: 2%;
 }
 
-#projects div figure figcaption {
+.project-tile figcaption {
     background-color: darkgray;
     border-style: solid;
-    border-color: darkgray;
+    border-color: #1b1717;
+    border-width: thin;
     width: 100%;
     height: 20%;
     display: flex;
@@ -100,15 +103,46 @@ header {
     align-items: center;
 }
 
-#projects div figure figcaption a {
+.project-tile figcaption:hover {
+    background-color: green;
+}
+
+.project-tile figcaption a {
     color: black;
     text-decoration-line: none;
-    font-size: 2vw;
+    font-size: 1.5vw;
+    font-weight: 300;
+}
+
+.project-tile figcaption a:hover {
+    text-decoration-line: underline;
 }
 
 #projects button {
-    width: 200px;
-    height: 50px;
+    width: 20%;
+    height: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-style: solid;
+    border-width: thin;
+    background-color: silver;
+    border-color: #1b1717;
+    font-family: "Montserrat";
+}
+
+#projects button:hover {
+    background-color: green;
+}
+
+#projects button a {
+    color: black;
+    text-decoration-line: none;
+    font-weight: 300;
+    font-size: 1.5vw;
+}
+
+#projects button a:hover {
+    text-decoration-line: underline;
 }
 
 @media (max-width: 1070px) and (min-width: 710px) { 
@@ -117,7 +151,6 @@ header {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
 
 @media (max-width: 711px) {
     #projects div {
@@ -147,19 +180,27 @@ header {
     align-items: center;
 }
 
-#contact h2 {
+#contact h1 {
     font-size: 2.5vw;
+    font-weight: 900;
 }
 
 #contact p {
     font-size: 2vw;
+    font-weight: 500;
 }
 
-#contact a {
+#linkedIn-link, #profile-link {
     color: white;
     text-decoration-line: none;
     font-size: 1.5vw;
+    font-weight: 300;
 }
+
+#linkedIn-link:hover, #profile-link:hover {
+    color: lawngreen;
+    text-decoration-line: underline;
+} 
 
 footer {
     background-color: #1b1717;
@@ -181,4 +222,5 @@ footer hr {
 
 footer p {
     font-size: 1.5vw;
+    font-weight: 300;
 }
