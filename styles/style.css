@@ -224,3 +224,13 @@ footer p {
     font-size: 1.5vw;
     font-weight: 300;
 }
+
+footer a {
+    color: white;
+    text-decoration-line: none;
+}
+
+footer a:hover {
+    color: lawngreen;
+    text-decoration-line: underline;
+}
